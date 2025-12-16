@@ -1,5 +1,30 @@
 # Dummy Error Log Analyzer using OpenAI API
 
+About
+
+This small project demonstrates how to use the OpenAI API to analyze application error logs and produce a concise JSON summary useful for triage. It is a lightweight example and developer utility, not a production monitoring system.
+
+Key features:
+
+- Read timestamped log files and send them to an LLM for analysis.
+- Extract structured JSON containing detected error types, counts, example messages, timestamps, severity, and recommended remediations.
+- Save analysis output to a file with `--output`.
+- Simple `.env` support for `OPENAI_API_KEY` and an included `dummy_error.log` for quick testing.
+
+Primary files:
+
+- `analyze_log.py`: main script that reads a log and calls the OpenAI ChatCompletion API.
+- `dummy_error.log`: example log for testing.
+- `requirements.txt`: Python dependencies.
+- `.env.example`: example environment file (do not commit real keys).
+- `.gitignore`: ignores secrets, venvs, logs, and build artifacts.
+
+Intended audience and use-cases:
+
+- Developers learning how to integrate LLMs for lightweight observability tasks.
+- Quick triage of small logs during debugging or post-mortem investigation.
+- Educational demos and prototypes.
+
 A minimal example showing how to analyze a small error log using the OpenAI API.
 
 Prerequisites
